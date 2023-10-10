@@ -23,9 +23,7 @@ struct ContentView: View {
                 selectedUser = User()
                 isShowingUser = true
             }
-            .alert("Welcome", isPresented: $isShowingUser, presenting: selectedUser) { user in
-                Button(user.id) { }
-            }
+            .alert("Welcome", isPresented: $isShowingUser) { } // passing an empty closure will still give you an OK button that dismisses the alert by default
     }
 }
 
