@@ -7,21 +7,23 @@
 
 import SwiftUI
 
+struct User: Identifiable {
+    var id = "Steph Curry"
+    
+}
+
 struct ContentView: View {
+    
+    @State private var selectedUser: User? = nil // User is optional,
     var body: some View {
-        NavigationView {
-            NavigationLink {
-                Text("New secondary")
-            } label : {
-                Text("Hello, world")
-                    .navigationTitle("Primary")
-                
+
+        Text("Hello, world")
+            .onTapGesture {
+                selectedUser = User()
             }
- 
-            Text("Secondary")
-            
-            Text("Tertiary")
-        }
+            .sheet(item: $selectedUser) { user in // if selectedUser exists, then user coming in will be non optional.  No need to force unwrap
+                Text(user.id)
+            }
     }
 }
 
