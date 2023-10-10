@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+extension View {
+    // Need to use @ViewBuilder as views returned have different views with diff modifiers!  USE THIS IN FUTURE!
+    @ViewBuilder func phoneOnlyNavigationView() -> some View {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            self.navigationViewStyle(.stack)
+        } else {
+            self
+        }
+    }
+}
+
 
 struct ContentView: View {
     
@@ -42,6 +53,7 @@ struct ContentView: View {
             
             WelcomeView()
         }
+        .phoneOnlyNavigationView()
     }
 
 }
