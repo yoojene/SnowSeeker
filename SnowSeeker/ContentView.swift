@@ -15,14 +15,16 @@ struct User: Identifiable {
 struct ContentView: View {
     
     @State private var selectedUser: User? = nil // User is optional,
+    @State private var isShowingUser = false // need to pass a boolean as well
     var body: some View {
 
         Text("Hello, world")
             .onTapGesture {
                 selectedUser = User()
+                isShowingUser = true
             }
-            .sheet(item: $selectedUser) { user in // if selectedUser exists, then user coming in will be non optional.  No need to force unwrap
-                Text(user.id)
+            .alert("Welcome", isPresented: $isShowingUser, presenting: selectedUser) { user in
+                Button(user.id) { }
             }
     }
 }
