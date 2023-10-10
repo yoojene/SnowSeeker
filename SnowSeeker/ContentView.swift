@@ -7,23 +7,36 @@
 
 import SwiftUI
 
-struct User: Identifiable {
-    var id = "Steph Curry"
-    
+struct UserView: View {
+    var body: some View {
+        Group {
+            Text("Name: Eugene")
+            Text("Country: England")
+            Text("Pets: Wilson")
+        }
+        .font(.title)
+        
+    }
 }
-
 struct ContentView: View {
     
-    @State private var selectedUser: User? = nil // User is optional,
-    @State private var isShowingUser = false // need to pass a boolean as well
-    var body: some View {
+    @State private var layoutVertically = false
 
-        Text("Hello, world")
-            .onTapGesture {
-                selectedUser = User()
-                isShowingUser = true
+    var body: some View {
+        Group {
+            if layoutVertically {
+                VStack {
+                    UserView()
+                }
+            } else {
+                HStack {
+                    UserView()
+                }
             }
-            .alert("Welcome", isPresented: $isShowingUser) { } // passing an empty closure will still give you an OK button that dismisses the alert by default
+        }
+        .onTapGesture {
+            layoutVertically.toggle()
+        }
     }
 }
 
