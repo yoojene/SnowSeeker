@@ -14,6 +14,7 @@
 		449F774B2AD5A43500BB48F3 /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = 449F774A2AD5A43500BB48F3 /* resorts.json */; };
 		449F774D2AD5A4BA00BB48F3 /* Resorts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449F774C2AD5A4BA00BB48F3 /* Resorts.swift */; };
 		449F774F2AD5A55100BB48F3 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449F774E2AD5A55100BB48F3 /* Bundle-Decodable.swift */; };
+		449F77512AD5A8CE00BB48F3 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449F77502AD5A8CE00BB48F3 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		449F774A2AD5A43500BB48F3 /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resorts.json; sourceTree = "<group>"; };
 		449F774C2AD5A4BA00BB48F3 /* Resorts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resorts.swift; sourceTree = "<group>"; };
 		449F774E2AD5A55100BB48F3 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		449F77502AD5A8CE00BB48F3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				449F773C2AD5993D00BB48F3 /* SnowSeekerApp.swift */,
 				449F773E2AD5993D00BB48F3 /* ContentView.swift */,
+				449F77502AD5A8CE00BB48F3 /* WelcomeView.swift */,
 				449F774C2AD5A4BA00BB48F3 /* Resorts.swift */,
 				449F774E2AD5A55100BB48F3 /* Bundle-Decodable.swift */,
 				449F774A2AD5A43500BB48F3 /* resorts.json */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				449F77512AD5A8CE00BB48F3 /* WelcomeView.swift in Sources */,
 				449F773F2AD5993D00BB48F3 /* ContentView.swift in Sources */,
 				449F773D2AD5993D00BB48F3 /* SnowSeekerApp.swift in Sources */,
 				449F774D2AD5A4BA00BB48F3 /* Resorts.swift in Sources */,
