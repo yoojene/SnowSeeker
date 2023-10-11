@@ -27,8 +27,8 @@ struct ResortView: View {
                             .resizable()
                             .scaledToFit()
                       
-                        Text(resort.imageCredit)                            
-                        .padding([.leading, .trailing])
+                        Text(resort.imageCredit)
+                            .padding([.leading, .trailing])
                             .background(.ultraThinMaterial)
                             .foregroundColor(.white)
                             .font(.caption)
